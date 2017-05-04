@@ -23,12 +23,12 @@ class TodoListModel {
     }
     
     // Save
-    public func saveTodo(completed: Bool, title: String) {
+    public func saveTodo(completed: Bool, title: String, completionHandler: (_: String) -> Void){
         
         // Create new managed object
-        if let newTodo = NSEntityDescription.insertNewObject(forEntityName: "Todo", into: context) as? TodoManagedObject {
-            newTodo.completed = completed
-            newTodo.title = title
+        if let newTask = NSEntityDescription.insertNewObject(forEntityName: "Task", into: context) as? TaskMO {
+            newTask.completed = completed
+            newTask.title = title
             
             // Save managed object
             do {
@@ -44,11 +44,11 @@ class TodoListModel {
     // Update
     
     // Fetch
-    public func fetchTodos() -> [TodoManagedObject]? {
-        let todosFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Todo")
+    public func fetchTodos() -> [TaskMO]? {
+        let todosFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
         
         do {
-            let todos = try context.fetch(todosFetch) as! [TodoManagedObject]
+            let todos = try context.fetch(todosFetch) as! [TaskMO]
             return todos
             
         } catch {

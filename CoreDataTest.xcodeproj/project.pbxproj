@@ -17,7 +17,7 @@
 		B3E005531EBAAAF5008B3B1F /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005521EBAAAF5008B3B1F /* TodoListViewController.swift */; };
 		B3E005551EBAAB1A008B3B1F /* TodoListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005541EBAAB1A008B3B1F /* TodoListItemViewController.swift */; };
 		B3E005591EBAADED008B3B1F /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005581EBAADED008B3B1F /* TodoListModel.swift */; };
-		B3E0055B1EBAB361008B3B1F /* TodoManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0055A1EBAB361008B3B1F /* TodoManagedObject.swift */; };
+		B3E0055B1EBAB361008B3B1F /* TaskMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0055A1EBAB361008B3B1F /* TaskMO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		B3E005521EBAAAF5008B3B1F /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		B3E005541EBAAB1A008B3B1F /* TodoListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListItemViewController.swift; sourceTree = "<group>"; };
 		B3E005581EBAADED008B3B1F /* TodoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
-		B3E0055A1EBAB361008B3B1F /* TodoManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoManagedObject.swift; sourceTree = "<group>"; };
+		B3E0055A1EBAB361008B3B1F /* TaskMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E005581EBAADED008B3B1F /* TodoListModel.swift */,
-				B3E0055A1EBAB361008B3B1F /* TodoManagedObject.swift */,
+				B3E0055A1EBAB361008B3B1F /* TaskMO.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				B3E005531EBAAAF5008B3B1F /* TodoListViewController.swift in Sources */,
 				B3E0052A1EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld in Sources */,
 				B3E005551EBAAB1A008B3B1F /* TodoListItemViewController.swift in Sources */,
-				B3E0055B1EBAB361008B3B1F /* TodoManagedObject.swift in Sources */,
+				B3E0055B1EBAB361008B3B1F /* TaskMO.swift in Sources */,
 				B3E005221EBAAA8B008B3B1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +551,7 @@
 				B3E0054B1EBAAA8B008B3B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3E0054C1EBAAA8B008B3B1F /* Build configuration list for PBXNativeTarget "CoreDataTestTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +560,7 @@
 				B3E0054E1EBAAA8B008B3B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3E0054F1EBAAA8B008B3B1F /* Build configuration list for PBXNativeTarget "CoreDataTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +569,7 @@
 				B3E005511EBAAA8B008B3B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

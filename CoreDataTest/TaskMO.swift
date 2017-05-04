@@ -1,5 +1,5 @@
 //
-//  TodoManagedObject.swift
+//  TaskMO.swift
 //  CoreDataTest
 //
 //  Created by Alice Newman on 4/5/17.
@@ -9,7 +9,7 @@
 
 import CoreData
 
-class TodoManagedObject: NSManagedObject {
+class TaskMO: NSManagedObject {
         @NSManaged private var complete: NSNumber
         @NSManaged var title: String?
         
