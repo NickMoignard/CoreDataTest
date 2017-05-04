@@ -23,7 +23,7 @@ class TodoListModel {
     }
     
     // Save
-    public func saveTodo(completed: Bool, title: String, completionHandler: (_: String) -> Void){
+    public func saveTodo(completed: Bool, title: String, completionHandler: (_ textFieldString: String) -> Void){
         
         // Create new managed object
         if let newTask = NSEntityDescription.insertNewObject(forEntityName: "Task", into: context) as? TaskMO {
@@ -31,15 +31,20 @@ class TodoListModel {
             newTask.title = title
             
             // Save managed object
-            do {
-                print("Trying to save context")
-                try self.context.save()
-                
-            } catch {
-                fatalError("Failure to save context: \(error)")
-            }
+            saveHelper()
+            completionHandler(title)
         }
     }
+    
+    
+    private func saveHelper() {
+        do {
+            try self.context.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+    
     
     // Update
     
@@ -59,7 +64,11 @@ class TodoListModel {
     
     
     // Delete
-    
+    public func deleteTask( task: TaskMO, completionHandler:() -> Void) {
+        context.delete(task)
+        saveHelper()
+        completionHandler()
+    }
     
     
     

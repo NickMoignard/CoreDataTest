@@ -136,6 +136,7 @@
 			children = (
 				B3E005581EBAADED008B3B1F /* TodoListModel.swift */,
 				B3E0055A1EBAB361008B3B1F /* TaskMO.swift */,
+				B3E005281EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -143,7 +144,6 @@
 		B3E0055D1EBAB929008B3B1F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B3E005281EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld */,
 				B3E005521EBAAAF5008B3B1F /* TodoListViewController.swift */,
 				B3E005541EBAAB1A008B3B1F /* TodoListItemViewController.swift */,
 			);

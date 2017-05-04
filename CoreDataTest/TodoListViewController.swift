@@ -25,7 +25,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         todoListView.dataSource = self
         
         // Fetch todos and populate controller data member
-        taskData = todoListModel.fetchTodos()
+        resetData()
     }
     
     // TableView Data Source Methods
@@ -67,17 +67,34 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
             let taskTitle = alert.textFields![0].text!
             self.todoListModel.saveTodo(completed: false, title: taskTitle) {
                 (_) in
-                self.todoListView.reloadData()
+                print("am currently reloading the data")
+                self.resetData()
             }
-            
-            
-            
-                
         })
         
         self.present(alert, animated: true, completion: nil)
     }
 
+    // Deleted a Task
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            // remove item from db
+            todoListModel.deleteTask(task: self.taskData![indexPath.row]) {
+                () in
+                self.resetData()
+            }
+            
+            
+
+        }
+    }
+    
+    // Helper Methods
+    private func resetData() {
+        taskData = todoListModel.fetchTodos()
+        todoListView.reloadData()
+    }
     
     
     
