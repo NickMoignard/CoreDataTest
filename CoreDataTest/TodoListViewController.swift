@@ -46,10 +46,14 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // Actions
-    @IBAction func newTask(_ sender: Any) {
-
+    @IBAction func newComment(_ sender: Any) {
         // Create Alert
         let alert = UIAlertController(title: "New Comment", message: "", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel ) {
+            (_) in
+            alert.dismiss(animated: true, completion: nil)
+        })
         
         // Add text field to alert
         alert.addTextField() {
@@ -63,12 +67,16 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
             
             // Dangerous line of code. Not sure how to handle
             let taskTitle = alert.textFields![0].text!
-            self.todoListModel.saveTodo(completed: false, title: taskTitle) {
-                (_) in
-                self.resetData()
+            
+            if (taskTitle != "") {
+                self.todoListModel.saveTodo(completed: false, title: taskTitle) {
+                    (_) in
+                    self.resetData()
+                }
+            } else {
+                alert.dismiss(animated: true, completion: nil)
             }
         })
-        
         self.present(alert, animated: true, completion: nil)
     }
 

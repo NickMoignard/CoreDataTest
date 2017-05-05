@@ -21,80 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEQ-1A-qlY">
-                                <rect key="frame" x="0.0" y="404" width="320" height="76"/>
-                                <subviews>
-                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkD-rN-Dvp">
-                                        <rect key="frame" x="8" y="8" width="304" height="60"/>
-                                        <color key="backgroundColor" red="0.24814063310000001" green="0.72472232579999996" blue="0.99513572449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
-                                        <color key="tintColor" red="0.38342142109999999" green="0.37920340899999999" blue="0.59473228450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Add Comment">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="newTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNm-8t-Glo"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="XkD-rN-Dvp" secondAttribute="bottom" constant="8" id="5RX-9S-Pde"/>
-                                    <constraint firstItem="XkD-rN-Dvp" firstAttribute="leading" secondItem="NEQ-1A-qlY" secondAttribute="leading" constant="8" id="AGv-qg-XwK"/>
-                                    <constraint firstItem="XkD-rN-Dvp" firstAttribute="top" secondItem="NEQ-1A-qlY" secondAttribute="top" constant="8" id="XaE-w0-Okr"/>
-                                    <constraint firstAttribute="trailing" secondItem="XkD-rN-Dvp" secondAttribute="trailing" constant="8" id="YjO-sF-B6N"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="28" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bo2-zG-PJj">
-                                <rect key="frame" x="0.0" y="64" width="320" height="340"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-Ju-XMd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="cell" textLabel="rwj-QN-QG2" rowHeight="60" style="IBUITableViewCellStyleDefault" id="RAK-3C-Wsu">
-                                        <rect key="frame" x="0.0" y="1" width="320" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="39" id="xmc-pV-M0S">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAK-3C-Wsu" id="aus-hZ-0Ge">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmc-pV-M0S" id="tS4-m5-6Vb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rwj-QN-QG2">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="59"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="tintColor" red="0.14901960784313725" green="0.99607843137254903" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="FV4-Yi-uzN" kind="show" id="OJ7-L6-1YI"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bo2-zG-PJj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GhZ-hQ-SZQ"/>
-                            <constraint firstItem="NEQ-1A-qlY" firstAttribute="top" secondItem="bo2-zG-PJj" secondAttribute="bottom" id="Ur3-AA-Boz"/>
-                            <constraint firstItem="bo2-zG-PJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="a5u-wY-NOt"/>
-                            <constraint firstAttribute="trailing" secondItem="NEQ-1A-qlY" secondAttribute="trailing" id="apL-e7-E7E"/>
-                            <constraint firstItem="NEQ-1A-qlY" firstAttribute="top" secondItem="bo2-zG-PJj" secondAttribute="bottom" id="fy7-SR-vvc"/>
-                            <constraint firstItem="NEQ-1A-qlY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iKs-m0-psv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NEQ-1A-qlY" secondAttribute="bottom" id="rQ2-hk-hml"/>
-                            <constraint firstAttribute="trailing" secondItem="NEQ-1A-qlY" secondAttribute="trailing" id="rbB-Ug-CdK"/>
-                            <constraint firstAttribute="trailing" secondItem="bo2-zG-PJj" secondAttribute="trailing" id="xLJ-gq-yBq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MgU-Ju-XMd" secondAttribute="bottom" id="Pul-ga-MPr"/>
+                            <constraint firstItem="MgU-Ju-XMd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XcE-cB-Bqx"/>
+                            <constraint firstAttribute="trailing" secondItem="MgU-Ju-XMd" secondAttribute="trailing" id="Ygq-cX-Rf8"/>
+                            <constraint firstItem="MgU-Ju-XMd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="dbj-gN-N1l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Comments" id="vOq-0P-a8W">
                         <barButtonItem key="backBarButtonItem" title="esc" id="OGd-6v-Rzk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9RD-mC-Ge2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="newComment:" destination="BYZ-38-t0r" id="qOO-fJ-B42"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="todoListView" destination="bo2-zG-PJj" id="WRm-IV-ZGI"/>
+                        <outlet property="todoListView" destination="MgU-Ju-XMd" id="rCR-Wj-YkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298.5507246376812" y="114.94565217391305"/>
+            <point key="canvasLocation" x="1316.25" y="115"/>
         </scene>
         <!--Todo Item View Controller-->
         <scene sceneID="buI-cY-3P3">
