@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B322993A1EBC6AEE007E042D /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32299391EBC6AEE007E042D /* CommentTableViewCell.xib */; };
+		B322993C1EBC742C007E042D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322993B1EBC742C007E042D /* CommentTableViewCell.swift */; };
 		B3E005221EBAAA8B008B3B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005211EBAAA8B008B3B1F /* AppDelegate.swift */; };
 		B3E005271EBAAA8B008B3B1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E005251EBAAA8B008B3B1F /* Main.storyboard */; };
 		B3E0052A1EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E005281EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B32299391EBC6AEE007E042D /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		B322993B1EBC742C007E042D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		B3E0051E1EBAAA8A008B3B1F /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E005211EBAAA8B008B3B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3E005261EBAAA8B008B3B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				B3E0052D1EBAAA8B008B3B1F /* LaunchScreen.storyboard */,
 				B3E005251EBAAA8B008B3B1F /* Main.storyboard */,
+				B32299391EBC6AEE007E042D /* CommentTableViewCell.xib */,
+				B322993B1EBC742C007E042D /* CommentTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				B3E0052F1EBAAA8B008B3B1F /* LaunchScreen.storyboard in Resources */,
 				B3E0052C1EBAAA8B008B3B1F /* Assets.xcassets in Resources */,
 				B3E005271EBAAA8B008B3B1F /* Main.storyboard in Resources */,
+				B322993A1EBC6AEE007E042D /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 				B3E005531EBAAAF5008B3B1F /* TodoListViewController.swift in Sources */,
 				B3E0052A1EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld in Sources */,
 				B3E005551EBAAB1A008B3B1F /* TodoListItemViewController.swift in Sources */,
+				B322993C1EBC742C007E042D /* CommentTableViewCell.swift in Sources */,
 				B3E0055B1EBAB361008B3B1F /* TaskMO.swift in Sources */,
 				B3E005221EBAAA8B008B3B1F /* AppDelegate.swift in Sources */,
 			);

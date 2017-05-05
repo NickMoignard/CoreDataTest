@@ -15,13 +15,17 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     var taskData: [TaskMO]? = nil
  
     // Outlets
-    @IBOutlet var todoListView: UITableView!
+    @IBOutlet var tableView: UITableView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        todoListView.delegate = self
-        todoListView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // Set up custom table view cells
+        let nib = UINib(nibName: "CommentTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "comment")
         
         // Fetch todos and populate controller data member
         resetData()
@@ -34,15 +38,22 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        // Create a table view cell then update the Outlets within the cell
+        let cell:CommentTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "comment") as! CommentTableViewCell
+        
         
         if let todoText = taskData![indexPath.row].title {
-            cell.textLabel?.text = todoText
+            cell.commentBody?.text = todoText
         } else {
             cell.textLabel?.text = "title attribute was nil"
         }
     
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Implement popularity to size of comment font logic here
+        return 80
     }
     
     // Actions
@@ -98,7 +109,7 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     // Helper Methods
     private func resetData() {
         taskData = todoListModel.fetchTodos()
-        todoListView.reloadData()
+        tableView.reloadData()
     }
     
     
