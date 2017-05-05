@@ -18,8 +18,6 @@ class TodoListModel {
     
     init() {
         context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        
     }
     
     // Save
@@ -49,17 +47,23 @@ class TodoListModel {
     // Update
     
     // Fetch
-    public func fetchTodos() -> [TaskMO]? {
+    public func fetchTodos() -> [TaskMO] {
         let todosFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
-        
+        var revTodos: [TaskMO] = []
         do {
             let todos = try context.fetch(todosFetch) as! [TaskMO]
-            return todos
+            
+            for i in 0..<todos.count {
+                revTodos.append(todos[todos.count - i - 1])
+            }
+            
+            
+            return revTodos
             
         } catch {
             fatalError("Todo fetch request failed: \(error)")
         }
-        return nil
+        return revTodos
     }
     
     

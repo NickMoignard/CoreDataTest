@@ -12,7 +12,6 @@ import CoreData
 
 class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let todoListModel = TodoListModel()
-//    let testData = [(false, "hello"), (false, "hello"), (false, "hello")]
     var taskData: [TaskMO]? = nil
  
     // Outlets
@@ -48,10 +47,9 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Actions
     @IBAction func newTask(_ sender: Any) {
-        print("clicky clicky")
-        
+
         // Create Alert
-        let alert = UIAlertController(title: "New Task", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New Comment", message: "", preferredStyle: .alert)
         
         // Add text field to alert
         alert.addTextField() {
@@ -60,14 +58,13 @@ class TodoListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         // Grab the string from UITextField
-        alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+        alert.addAction(UIAlertAction(title: "Add", style: .default) {
             (_) in
             
             // Dangerous line of code. Not sure how to handle
             let taskTitle = alert.textFields![0].text!
             self.todoListModel.saveTodo(completed: false, title: taskTitle) {
                 (_) in
-                print("am currently reloading the data")
                 self.resetData()
             }
         })
