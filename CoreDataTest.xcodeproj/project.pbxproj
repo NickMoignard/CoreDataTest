@@ -20,6 +20,9 @@
 		B3E005551EBAAB1A008B3B1F /* TodoListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005541EBAAB1A008B3B1F /* TodoListItemViewController.swift */; };
 		B3E005591EBAADED008B3B1F /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E005581EBAADED008B3B1F /* TodoListModel.swift */; };
 		B3E0055B1EBAB361008B3B1F /* TaskMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0055A1EBAB361008B3B1F /* TaskMO.swift */; };
+		B3EA66CE1EBC931A00D6AF43 /* UserMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA66CD1EBC931A00D6AF43 /* UserMO.swift */; };
+		B3EA66D01EBC932D00D6AF43 /* CommentMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA66CF1EBC932D00D6AF43 /* CommentMO.swift */; };
+		B3EA66D21EBC9ACA00D6AF43 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA66D11EBC9ACA00D6AF43 /* CommentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		B3E005541EBAAB1A008B3B1F /* TodoListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListItemViewController.swift; sourceTree = "<group>"; };
 		B3E005581EBAADED008B3B1F /* TodoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 		B3E0055A1EBAB361008B3B1F /* TaskMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMO.swift; sourceTree = "<group>"; };
+		B3EA66CD1EBC931A00D6AF43 /* UserMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMO.swift; sourceTree = "<group>"; };
+		B3EA66CF1EBC932D00D6AF43 /* CommentMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentMO.swift; sourceTree = "<group>"; };
+		B3EA66D11EBC9ACA00D6AF43 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,9 @@
 				B3E005581EBAADED008B3B1F /* TodoListModel.swift */,
 				B3E0055A1EBAB361008B3B1F /* TaskMO.swift */,
 				B3E005281EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld */,
+				B3EA66CD1EBC931A00D6AF43 /* UserMO.swift */,
+				B3EA66CF1EBC932D00D6AF43 /* CommentMO.swift */,
+				B3EA66D11EBC9ACA00D6AF43 /* CommentModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,9 +321,12 @@
 			files = (
 				B3E005591EBAADED008B3B1F /* TodoListModel.swift in Sources */,
 				B3E005531EBAAAF5008B3B1F /* TodoListViewController.swift in Sources */,
+				B3EA66CE1EBC931A00D6AF43 /* UserMO.swift in Sources */,
 				B3E0052A1EBAAA8B008B3B1F /* CoreDataTest.xcdatamodeld in Sources */,
 				B3E005551EBAAB1A008B3B1F /* TodoListItemViewController.swift in Sources */,
 				B322993C1EBC742C007E042D /* CommentTableViewCell.swift in Sources */,
+				B3EA66D01EBC932D00D6AF43 /* CommentMO.swift in Sources */,
+				B3EA66D21EBC9ACA00D6AF43 /* CommentModel.swift in Sources */,
 				B3E0055B1EBAB361008B3B1F /* TaskMO.swift in Sources */,
 				B3E005221EBAAA8B008B3B1F /* AppDelegate.swift in Sources */,
 			);
